@@ -152,7 +152,7 @@
 	IncrementalFilter.SearchedItem = function(obj,setting){
 		this.useHighlight = (setting.useHighlight && $.fn.highlightText && $.fn.removeOuterTag)
 		if(this.useHighlight){
-			this.highlightElem = setting.highlightElem || $('<em class="highlight" />');
+			this.highlightElem = setting.highlightElem || $('<mark class="highlight" />');
 			this.highlightExpr = /^<(\w+)/.exec($('<div />').append(this.highlightElem).html())[1]
 							   + '.'+this.highlightElem.attr('class').split(/\s/).join('.');
 		}
